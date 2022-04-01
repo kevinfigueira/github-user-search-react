@@ -5,35 +5,31 @@ import * as React from 'react'
 
 
 // FONTS
-import SpaceMonoBold from '../Fonts/SpaceMono-Bold.ttf';
-import SpaceMonoRegular from '../Fonts/SpaceMono-Regular.ttf';
-import MontserratMedium from '../Fonts/Montserrat-Medium.ttf';
-import MontserratBold from '../Fonts/Montserrat-Bold.ttf';
 
 export const GlobalStyles = createGlobalStyle`
   // Space Mono
 @font-face {
     font-family: 'Space Mono';
-    src: ${`url(${SpaceMonoBold}) format('truetype')`};
+    src: url('../Fonts/SpaceMono-Bold.ttf');
     font-weight: 700;
     font-style: normal;
 };
 @font-face {
     font-family: 'Space Mono';
-    src: ${`url(${SpaceMonoRegular}) format('truetype')`};
+    src: url('../Fonts/SpaceMono-Regular.ttf');
     font-weight: 400;
     font-style: normal;
 };
 
 // Montserrat
 @font-face {
-    src: ${`url(${MontserratMedium}) format('truetype');`};
+    src: url('../Fonts/Montserrat-Medium.ttf');
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
 }
 @font-face {
-    src: ${`url(${MontserratBold}) format('truetype');`};
+    src: url('../Fonts/Montserrat-Bold.ttf');
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 700;
