@@ -1,39 +1,12 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
-import * as React from 'react'
-
-
-
-// FONTS
-
 export const GlobalStyles = createGlobalStyle`
-  // Space Mono
-@font-face {
-    font-family: 'Space Mono';
-    src: url('../Fonts/SpaceMono-Bold.ttf');
-    font-weight: 700;
-    font-style: normal;
-};
-@font-face {
-    font-family: 'Space Mono';
-    src: url('../Fonts/SpaceMono-Regular.ttf');
-    font-weight: 400;
-    font-style: normal;
-};
 
-// Montserrat
-@font-face {
-    src: url('../Fonts/Montserrat-Medium.ttf');
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 500;
-}
-@font-face {
-    src: url('../Fonts/Montserrat-Bold.ttf');
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 700;
-}
+//FONTS
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+
 
 // VARIABLES
 :root {
@@ -63,7 +36,7 @@ html {
     padding: 0;
 }
 body {
-    font-family: 'Space Mono';
+    font-family: 'Space Mono', monospace, 'Montserrat', sans-seri;
     font-weight: 400;
     background-color: ${c => c.theme.colors.bg_2};
 }
