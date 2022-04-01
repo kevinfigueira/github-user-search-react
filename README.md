@@ -3,7 +3,7 @@
 
   &#xa0;
 
-  <!-- <a href="https://githubusersearch.netlify.app">Demo</a> -->
+  <a href="https://githubusersearchrepos.netlify.app/">Demo</a>
 </div>
 
 <h1 align="center">Github User Search</h1>
