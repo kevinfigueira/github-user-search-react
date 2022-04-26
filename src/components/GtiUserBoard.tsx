@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 //UTILS
 import { api } from '../utils/api';
 
@@ -30,11 +28,10 @@ import {
 import { MdLocationOn, MdLink, MdOutlineApartment } from 'react-icons/md';
 import { FaTwitter } from 'react-icons/fa';
 
-//COMPONENTS
-import UserNotFounder from "./UserNotFounder";
 
 
-const GitUserBoard = (userProfile: any) => {
+
+const GitUserBoard = ( { userProfile }: any) => {
 
     const {
         avatar_url,
@@ -50,11 +47,9 @@ const GitUserBoard = (userProfile: any) => {
         company,
         twitter_username,
     } = userProfile;
-
-
+    
     return (
         <>
-            {name &&  
             <UserContainer >
                 <UserBoardHeader>
                     <UserImg  src={avatar_url} alt="Github user profile" />
@@ -105,7 +100,7 @@ const GitUserBoard = (userProfile: any) => {
                         <UserPublicItem><MdOutlineApartment/> <UserPublicInfo>{company ? company : 'Not avaible'}</UserPublicInfo></UserPublicItem>
                     </UserPublicList>
                 </UserPublic>
-            </UserContainer>}
+            </UserContainer>
         </>
     )
 }

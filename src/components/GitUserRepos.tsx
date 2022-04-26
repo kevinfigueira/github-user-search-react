@@ -22,30 +22,37 @@ import {
     ReposLink,
     ReposText,
     ReposTitle
-} from '../assets/styles/repos'
+} from '../assets/styles/repos';
 
-const GitUserRepos = ( { name }: any) => {
-    const [repos, setRepos] = useState([])
 
-    const getAllRepos = async () =>{
-        let response = await api.getUserRepos(name)
-        setRepos(response)
+const GitUserRepos = ( { userRepos }: any) => {
+    const [repos, setRepos] = useState(false);
+ 
+    const showRepos = () => {
+        if(userRepos){
+            setRepos(!repos)
+        }
     }
-
+    console.log((userRepos))
     return (
         <>  
             <ReposContainer>
                 <div>
-                    {!repos.length &&
-                        <ReposButton onClick={getAllRepos}>Show Repos</ReposButton>
+
+                    {!repos &&
+                        <ReposButton onClick={showRepos}>Show Repos</ReposButton>
                     }
-                    
+
+                    {repos &&
                     <ReposCardsList>
-                        {repos.map((repo: reposType) => {
+                        {userRepos.map((repo: reposType) => {
                             const {
-                                id, html_url, 
-                                name, description, 
-                                stargazers_count, updated_at
+                                id, 
+                                html_url, 
+                                name, 
+                                description, 
+                                stargazers_count, 
+                                updated_at
                             } = repo;
                             return (
                                 <ReposCard key={`repo-${id}`}>
@@ -69,7 +76,7 @@ const GitUserRepos = ( { name }: any) => {
                                 </ReposCard>
                             )
                         })}
-                    </ReposCardsList>
+                    </ReposCardsList>}
                 </div>
             </ReposContainer>
         </>

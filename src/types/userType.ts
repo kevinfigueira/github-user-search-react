@@ -29,6 +29,6 @@ export type userType = {
     public_gists?: number,
     followers?: number,
     following?: number,
-    created_at?: string,
+    created_at?: string | any,
     updated_at?: string
 }

@@ -7,7 +7,7 @@ export const SearchContainer = styled.header`
     color: var(--txt-5);
 `;
 
-export const SearcForm = styled.div`
+export const SearcForm = styled.form`
     display: flex;
     font-size: 1.4rem;
     gap: 1rem;
@@ -34,7 +34,7 @@ export const SearchInput = styled.input.attrs({ type: 'text' })`
   }
 `;
 
-export const Searchbutton = styled.button`
+export const Searchbutton = styled.button.attrs({ type: 'submit' })`
     border-radius: 1rem;
     padding: 1em 1.2em;
     margin-left: auto;
